@@ -8,7 +8,7 @@
 
 City Explorer is a React application that queries the user(s) for a location (city), request an API from [LocationIQ](https://locationiq.com/), and then display that location through imagery/mapping. City Explorer also informs users of request errors.
 
-![WRRC](./wrrc.png)
+![WRRC](./src/img/wrrc.png)
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -30,11 +30,11 @@ Name of feature: Locations
 
 Estimate of time needed to complete: 90 minutes
 
-Start time: 1647
+Start time: 1656
 
-Finish time: _____
+Finish time: 22:58
 
-Actual time needed to complete: _____
+Actual time needed to complete: 120 minutes (had to step away and finish later)
 
 ### Lab 06 - Feature 2
 
@@ -42,7 +42,7 @@ Name of feature: Maps
 
 Estimate of time needed to complete: 45 minutes
 
-Start time: _____
+Start time: 22:59
 
 Finish time: _____
 
