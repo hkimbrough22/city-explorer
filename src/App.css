@@ -1,9 +1,12 @@
 body {
   background-color: darkgray;
 }
+
 #formDiv {
   width: 600px;
-  margin: auto;
+  margin: 25px auto;
+  padding: 10px;
+  border: medium solid black;
 }
 
 input {
