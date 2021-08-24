@@ -32,9 +32,9 @@ Estimate of time needed to complete: 90 minutes
 
 Start time: 1656
 
-Finish time: _____
+Finish time: 22:58
 
-Actual time needed to complete: _____
+Actual time needed to complete: 120 minutes (had to step away and finish later)
 
 ### Lab 06 - Feature 2
 
@@ -42,7 +42,7 @@ Name of feature: Maps
 
 Estimate of time needed to complete: 45 minutes
 
-Start time: _____
+Start time: 22:59
 
 Finish time: _____
 
