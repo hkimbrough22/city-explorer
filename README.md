@@ -44,9 +44,9 @@ Estimate of time needed to complete: 45 minutes
 
 Start time: 22:59
 
-Finish time: _____
+Finish time: 23:40
 
-Actual time needed to complete: _____
+Actual time needed to complete: 41 minutes
 
 ### Lab 06 - Feature 3
 
@@ -54,13 +54,14 @@ Name of feature: Errors
 
 Estimate of time needed to complete: 60 minutes
 
-Start time: _____
+Start time: 00:00
 
-Finish time: _____
+Finish time: 00:38
 
-Actual time needed to complete: _____
+Actual time needed to complete: 38 minutes
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 - Marco worked with me to create the WRRC
 - [Code Fellows Code 301 Class Repo](https://github.com/codefellows/seattle-code-301d77) for .gitignore
+- [Patrick Laurion](https://github.com/plaurion1989) helped with the error message of Lab 06 - Feature 03
