@@ -8,7 +8,7 @@ import { Card } from 'react-bootstrap';
 import WeatherReport from './weather';
 import Movies from './movie';
 
-const server = process.env.REACT_APP_PORT || `https://localhost:3001`;
+const server = process.env.REACT_APP_API_URL || `https://localhost:3001`;
 
 export default class App extends Component {
 
