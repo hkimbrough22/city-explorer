@@ -6,6 +6,7 @@ import { CardGroup, Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import WeatherReport from './weather';
+import Movies from './movie';
 
 export default class App extends Component {
 
@@ -16,6 +17,7 @@ export default class App extends Component {
       city: {},
       error: '',
       weatherReport: [],
+      movieList: [],
     }
   }
 
@@ -40,19 +42,34 @@ export default class App extends Component {
         city: {},
       })
     }
+    this.getWeather();
+    this.getMovies();
+  }
 
-    const API2 = `http://localhost:3001/weather?searchQuery=${this.state.citySearch}`;
+  getWeather = async () => {
+    const API2 = `http://localhost:3001/weather?searchQuery=${this.state.citySearch}&lat=${this.state.city.lat}&lon=${this.state.city.lon}`;
     try {
       const weatherData = await axios.get(`${API2}`);
       console.log(weatherData);
       const weatherReport = weatherData.data;
-      this.setState({weatherReport: weatherReport});
+      this.setState({ weatherReport: weatherReport });
     }
     catch (error) {
       console.log(error);
-      this.setState({error: `${error}. The server could not find your city. Please try again.`,})
+      this.setState({ error: `${error}. The server could not find your city. Please try again.`, })
     }
-    // console.log(this.state.weatherReport);
+  }
+  
+  getMovies = async () => {
+    const API3 = `http://localhost:3001/movies?searchQuery=${this.state.citySearch}`
+    try {
+      const movieData = await axios.get(`${API3}`);
+      const movieList = movieData.data;
+      this.setState({ movieList: movieList, });
+    } catch (error) {
+      console.log(error);
+      this.setState({ error: `${error}. The server could not find any movies. Please try again.`, })
+    }
   }
 
   render() {
@@ -74,22 +91,23 @@ export default class App extends Component {
           :
           <>
             {this.state.city.display_name &&
-            <CardGroup>
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${this.state.city.lat},${this.state.city.lon}&zoom=12`} />
-                <Card.Body>
-                  <Card.Title>{this.state.city.display_name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted"> </Card.Subtitle>
-                  <Card.Text>
-                    Latitude: {this.state.city.lat}
-                  </Card.Text>
-                  <Card.Text>
-                    Longitude: {this.state.city.lon}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <CardGroup>
+                <Card style={{ width: '18rem' }} id='cityMap'>
+                  <Card.Img variant="top" src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${this.state.city.lat},${this.state.city.lon}&zoom=12`} />
+                  <Card.Body>
+                    <Card.Title>{this.state.city.display_name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted"> </Card.Subtitle>
+                    <Card.Text>
+                      Latitude: {this.state.city.lat}
+                    </Card.Text>
+                    <Card.Text>
+                      Longitude: {this.state.city.lon}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
                 <WeatherReport weatherReport={this.state.weatherReport} />
-            </CardGroup>
+                <Movies movieList={this.state.movieList}/>
+              </CardGroup>
             }
           </>
         }
