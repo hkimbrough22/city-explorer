@@ -2,8 +2,12 @@ body {
   background-color: darkgray;
 }
 
+#cityMap {
+  height: 450px;
+}
+
 #formDiv {
-  width: 600px;
+  width: 900px;
   margin: 25px auto;
   padding: 10px;
   border: medium solid black;

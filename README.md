@@ -8,7 +8,17 @@
 
 City Explorer is a React application that queries the user(s) for a location (city), request an API from [LocationIQ](https://locationiq.com/), and then display that location through imagery/mapping. City Explorer also informs users of request errors.
 
+### Day 1 WRRC
+
 ![WRRC](./src/img/wrrc.png)
+
+### Day 2 WRRC
+
+![WRRC](./src/img/wrrc2.png)
+
+### Day 3 WRRC
+
+![WRRC](./src/img/wrrc3.png)
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -60,8 +70,45 @@ Finish time: 00:38
 
 Actual time needed to complete: 38 minutes
 
+### Lab07 - Feature 1
+
+Name of feature: Weather
+
+Estimate of time needed to complete: 150 minutes
+
+Start time: 16:22
+
+Finish time: 19:30
+
+Actual time needed to complete: 188 minutes
+
+### Lab07 - Feature 2
+
+Name of feature: Error
+
+Estimate of time needed to complete: 60 minutes
+
+Start time: 22:00
+
+Finish time: 22:56
+
+Actual time needed to complete: 56 minutes
+
+### Lab08 - Feature 1
+
+Name of feature: Weather (live)
+
+Estimate of time needed to complete: 120 minutes
+
+Start time: 14:00
+
+Finish time: 16:26
+
+Actual time needed to complete: 146 minutes
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 - Marco worked with me to create the WRRC
 - [Code Fellows Code 301 Class Repo](https://github.com/codefellows/seattle-code-301d77) for .gitignore
 - [Patrick Laurion](https://github.com/plaurion1989) helped with the error message of Lab 06 - Feature 03
+- TA Hexx King helped a ton with Lab 08 - Feature 1.
