@@ -8,6 +8,8 @@ import { Card } from 'react-bootstrap';
 import WeatherReport from './weather';
 import Movies from './movie';
 
+const server = process.env.REACT_APP_PORT || `https://localhost:3001`;
+
 export default class App extends Component {
 
   constructor(props) {
@@ -47,7 +49,7 @@ export default class App extends Component {
   }
 
   getWeather = async () => {
-    const API2 = `http://localhost:3001/weather?searchQuery=${this.state.citySearch}&lat=${this.state.city.lat}&lon=${this.state.city.lon}`;
+    const API2 = `${server}/weather?searchQuery=${this.state.citySearch}&lat=${this.state.city.lat}&lon=${this.state.city.lon}`;
     try {
       const weatherData = await axios.get(`${API2}`);
       console.log(weatherData);
@@ -61,7 +63,7 @@ export default class App extends Component {
   }
   
   getMovies = async () => {
-    const API3 = `http://localhost:3001/movies?searchQuery=${this.state.citySearch}`
+    const API3 = `${server}/movies?searchQuery=${this.state.citySearch}`
     try {
       const movieData = await axios.get(`${API3}`);
       const movieList = movieData.data;
