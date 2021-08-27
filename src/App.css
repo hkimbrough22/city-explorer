@@ -2,12 +2,54 @@ body {
   background-color: darkgray;
 }
 
+#mainCardDiv {
+  flex-wrap: wrap;
+  height:fit-content;
+  display: inline-block;
+}
+
 #cityMap {
+  height: 500px;
+  width: 500px;
+}
+
+#weatherReport {
+  position: relative;
+  float: right;
+  margin-top: 50px;
+  flex-direction: column;
+  height:fit-content;
+}
+
+#movieList {
+  margin-top: 150px;
+  float: left;
+  display: inline;
+  /* flex-direction:row;
+  flex-wrap: wrap; */
+}
+
+#movieList * {
+  height:fit-content;
+}
+/* 
+/* #cityMap {
   height: 450px;
+} */
+
+/* #cityMap {
+  width: 350px;
+}
+
+#movieList * {
+  width: 200px;
+}
+
+#mainCardDiv {
+  flex-wrap: wrap;
 }
 
 #formDiv {
-  width: 900px;
   margin: 25px auto;
   padding: 10px;
   border: medium solid black;
@@ -19,4 +61,4 @@ input {
 
 button {
   margin: 25px 0px;
-}
+} */

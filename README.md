@@ -10,15 +10,15 @@ City Explorer is a React application that queries the user(s) for a location (ci
 
 ### Day 1 WRRC
 
-![WRRC](./src/img/wrrc.png)
+![WRRC](./img/wrrc.png)
 
 ### Day 2 WRRC
 
-![WRRC](./src/img/wrrc2.png)
+![WRRC](./img/wrrc2.png)
 
 ### Day 3 WRRC
 
-![WRRC](./src/img/wrrc3.png)
+![WRRC](./img/wrrc3.png)
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -105,6 +105,18 @@ Start time: 14:00
 Finish time: 16:26
 
 Actual time needed to complete: 146 minutes
+
+### Lab09 - Feature 2
+
+Name of feature: Refactor
+
+Estimate of time needed to complete: 120 minutes
+
+Start time: 15:38
+
+Finish time: 17:16
+
+Actual time needed to complete: 98 minutes
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

@@ -1,12 +1,12 @@
-import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import axios from 'axios';
 import { Component } from 'react';
 import { CardGroup, Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import WeatherReport from './weather';
-import Movies from './movie';
+import Movies from './movies';
 
 const server = process.env.REACT_APP_API_URL || `https://localhost:3001`;
 
@@ -77,10 +77,10 @@ export default class App extends Component {
   render() {
     return (
       <div id="formDiv">
-        <Form>
+        <Form onSubmit={this.getLocationAndImage}>
           <Form.Label>Enter a City</Form.Label>
           <Form.Control onChange={this.handleChange} value={this.state.citySearch} placeholder="Moscow" style={{ width: '50%' }} />
-          <Button variant="primary" onClick={this.getLocationAndImage} onSubmit={this.getLocationAndImage}>
+          <Button variant="primary" type='submit' >
             Explore!
           </Button>
         </Form>
@@ -93,8 +93,8 @@ export default class App extends Component {
           :
           <>
             {this.state.city.display_name &&
-              <CardGroup>
-                <Card style={{ width: '18rem' }} id='cityMap'>
+              <CardGroup id="mainCardDiv">
+                <Card id='cityMap'>
                   <Card.Img variant="top" src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${this.state.city.lat},${this.state.city.lon}&zoom=12`} />
                   <Card.Body>
                     <Card.Title>{this.state.city.display_name}</Card.Title>
@@ -108,7 +108,7 @@ export default class App extends Component {
                   </Card.Body>
                 </Card>
                 <WeatherReport weatherReport={this.state.weatherReport} />
-                <Movies movieList={this.state.movieList}/>
+                <Movies movieList={this.state.movieList} cityName={this.state.citySearch}/>
               </CardGroup>
             }
           </>
