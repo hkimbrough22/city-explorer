@@ -8,7 +8,8 @@ import { Card } from 'react-bootstrap';
 import WeatherReport from './weather';
 import Movies from './movies';
 
-const server = process.env.REACT_APP_API_URL || `https://localhost:3001`;
+const server = process.env.REACT_APP_API_URL || `http://localhost:3001`;
+//  process.env.REACT_APP_API_URL ||
 
 export default class App extends Component {
 
@@ -20,6 +21,7 @@ export default class App extends Component {
       error: '',
       weatherReport: [],
       movieList: [],
+      lastRequest: '',
     }
   }
 
@@ -37,7 +39,9 @@ export default class App extends Component {
       this.setState({
         city: response.data[0],
         error: '',
+        lastRequest: new Date().toLocaleString() + '',
       });
+      console.log(this.state);
     } catch (error) {
       this.setState({
         error: `${error} LocationIQ encountered a problem with your request.`,
@@ -83,7 +87,14 @@ export default class App extends Component {
           <Button variant="primary" type='submit' >
             Explore!
           </Button>
-        </Form>
+          </Form>
+          {this.state.lastRequest ?
+          <Form.Text className="text-muted">
+           Last Updated: {this.state.lastRequest}.
+          </Form.Text>
+          :
+          ''
+          }
         {this.state.error ?
           <Card style={{ width: '18rem' }}>
             <Card.Body>
